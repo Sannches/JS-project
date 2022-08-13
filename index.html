@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Server open</title>
+</head>
+<body>
+	<div class="wr">
+	  <img id="img">
+	</div>
+
+
+	<script src="server JSON.js"></script>
+
+	<script>
+		img.onclick = function() {
+			let start = Date.now();
+			let gorod = [
+		 		[1,"Севастополь", 830, 400, "ежедневно", "6-00, 9-00"],
+				[2,"Ялта", 380, 150, "пн, ср, пт", "8-00, 10-00, 12-00, 14-00, 16-00"],
+				[3,"Бахчисарай", 1300, 620, "ср, пт, вс", "5-30, 7-00"]
+				];
+
+			    localStorage.clear();    
+			    console.log("");   
+			    console.log("локальное хранилище очищено");    
+			    console.log(localStorage);    
+			
+			localStorage.setItem(`Ekskurs`, JSON.stringify(gorod));
+			//console.log(localStorage);    
+
+			popup = window.open('main.html');
+		}
+	</script>
+
+		<script>
+			let event = new Event("click");
+			img.dispatchEvent(event);
+		</script>
+
+		
+
+
+</body>
+</html>
